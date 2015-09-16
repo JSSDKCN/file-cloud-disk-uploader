@@ -1,0 +1,45 @@
+{
+  "name": "file-cloud-disk-uploader",
+  "version": "0.0.1",
+  "description": "Disk uploader for file cloud",
+  "author": {
+    "name": "calidion",
+    "email": "calidion@gmail.com",
+    "url": "blog.3gcnbeta.com"
+  },
+  "repository": "JSSDKCN/file-cloud-disk-uploader",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "file-cloud-disk-uploader",
+    "disk",
+    "cp",
+    "file",
+    "cloud",
+    "hash",
+    "uploader"
+  ],
+  "dependencies": {
+    "file-hash": "^0.0.5",
+    "meow": "^3.1.0"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-cli": "^1.12.0",
+    "jshint-stylish": "^1.0.1",
+    "load-grunt-tasks": "^3.1.0",
+    "time-grunt": "^1.1.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "bin": {
+    "fashcp": "cli.js"
+  }
+}
