@@ -15,16 +15,26 @@ var cli = meow({
   ].join('\n')
 });
 
-fileCloudDiskUploader(function (error, hashNamedFile, realPath) {
-    if (error) {
-      console.log('Errors Occur:' + error);
-    } else {
-      console.log('Hashed file name: ' + hashNamedFile);
-      console.log('Saved file place: ' + realPath);
-    }
-  },
-  path.resolve(process.env.PWD, cli.input[0]),
-  path.resolve(process.env.PWD, cli.input[1]),
-  cli.flags.type,
-  cli.flags.case === 'upper'
-);
+if (cli.input[0] && cli.input[1]) {
+
+  fileCloudDiskUploader(function (error, hashNamedFile, realPath) {
+      if (error) {
+        console.log('Errors Occur:' + error);
+      } else {
+        console.log('Hashed file name: ' + hashNamedFile);
+        console.log('Saved file place: ' + realPath);
+      }
+    },
+    path.resolve(process.env.PWD, cli.input[0]),
+    path.resolve(process.env.PWD, cli.input[1]),
+    cli.flags.type,
+    cli.flags.case === 'upper'
+  );
+} else {
+  if (!cli.input[0]) {
+    console.log("specify a file to be copied!");
+  }
+  if (!cli.input[1]) {
+    console.log("specify a dir for the file to be copied!");
+  }
+}
