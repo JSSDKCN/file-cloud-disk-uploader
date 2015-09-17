@@ -7,7 +7,7 @@
     "email": "calidion@gmail.com",
     "url": "blog.3gcnbeta.com"
   },
-  "repository": "JSSDKCN/file-cloud-disk-uploader",
+  "repository": "file-cloud/file-cloud-disk-uploader",
   "license": "MIT",
   "files": [
     "index.js",
