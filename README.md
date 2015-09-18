@@ -12,6 +12,7 @@ $ npm install --save file-cloud-disk-uploader
 
 ## Usage
 
+```js
 var fileCloudDiskUploader = require('../');
 var path = require('path');
 var fs = require('fs');
@@ -22,9 +23,8 @@ fileCloudDiskUploader(function (error, hashNamedFile, filename) {
     done();
   },
   path.resolve(__dirname, 'asserts/a.txt'), path.resolve(__dirname, 'hashed/'));
-
-    
 ```
+
 
 ```sh
 $ npm install --global file-cloud-disk-uploader
@@ -42,7 +42,7 @@ $ fashcp a.jpg --type md5
 //specify a dir to take the out put file and with upper case file name
 $ fashcp a.jpg images --type md5 --case upper
 //images/969996C794949BBF0E40827CEFC98F2D.jpg
-
+```
 
 ## License
 
