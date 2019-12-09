@@ -8,6 +8,7 @@ describe('file-cloud-disk-uploader node module', function () {
     fileCloudDiskUploader(function (error, hashNamedFile, filename) {
         assert.equal(true, hashNamedFile === 'b9b34ff32e8bfbb90974f8b3154133092ccbf288.txt');
         assert.equal(true, fs.existsSync(filename));
+        fs.unlinkSync(path.resolve(__dirname, "./hashed/" + hashNamedFile));
         done();
       },
       path.resolve(__dirname, 'asserts/a.txt'), path.resolve(__dirname, 'hashed/'));
